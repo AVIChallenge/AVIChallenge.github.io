@@ -2414,7 +2414,7 @@ input, select, textarea {
 			}
 
 			#nav li.current a {
-				background: #D079C0FF;
+				background: #19562d;
 				color: #fff;
 			}
 
@@ -2542,7 +2542,7 @@ input, select, textarea {
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #d079c0;
+		border-top: solid 5px #19562d;
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
