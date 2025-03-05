@@ -197,7 +197,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 6em;
+		margin-bottom: 2.5em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
