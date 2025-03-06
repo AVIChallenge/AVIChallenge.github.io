@@ -31,7 +31,8 @@
             <li><a href="index.html">Home</a></li>
             <li class="current"><a href="challenge.html">AVI Challenge 2025</a>
             <ul>
-                <li><a href="challenge.html#PS">Overview</a></li>
+                <li><a href="challenge.html#OV">Overview</a></li>
+                <li><a href="challenge.html#DS">Dataset</a></li>
                 <li><a href="challenge.html#PS">Track 1: Personality assessment</a></li>
                 <li><a href="challenge.html#IPA">Track 2: Interview performance assessment</a></li>
                 <li><a href="challenge.html#submission">Submission</a></li>
@@ -48,13 +49,156 @@
     <section id="main">
         <div class="container">
 
-            <!-- Pre-amble section -->
+            <!-- Overview section -->
             <section>
-                Click <a href="files/CfP_MEGC2024_final.pdf">here</a> to download the CFP.
-                This year's Grand Challenge comprises of two tracks:
+                <h2 class="major"><span>Overview</span></h2>
+                <a name="OV"></a>
+                AVI Challenge 2025 consists of two tracks: the <a href="challenge.html#PS">personality assessment track</a> and the <a href="challenge.html#IPA">interview performance assessment track</a>. Track 1 focuses on evaluating subjects' personality traits based on their responses to corresponding <b>personality questions</b>. Track 2 concentrates on using multimodal information from subjects' responses to <b>all questions (i.e., including both generic and personality questions)</b> to assess their job-related competencies and interview performance.
+
+
+                <br/>
+            </section>
+
+            <!-- Dataset section -->
+            <section>
+                <a name="DS"></a>
+                <header class="main">
+                    <h2 class="major"><span>Dataset</span></h2>
+                </header>
+
+                <p>The dataset is available on Open Science Framework page (<a href="https://doi.org/10.17605/OSF.IO/JYA5Q">https://doi.org/10.17605/OSF.IO/JYA5Q</a>). Below is the details of how the dataset is constructed.</p>
+
+                <h3>Subjects</h3>  <a name="subject"></a>
+                <uL>
+                    <LI>The dataset consisted of video interview data from 646 subjects. Subjects (<i>n = 793</i>) were recruited through the online platform Prolific. After excluding subjects (a) with incomplete responses (<i>n = 40</i>), (b) who did not consent for their data to be shared (<i>n = 10</i>), (c) who did not pass the attention checks (<i>n = 7</i>), (d) whose variation in personality (HEXACO) items was either too large or too small (<i>n = 6</i>), (e) who self-reported that they did not take the study seriously (<i>n = 12</i>), (f) whose videos contained corrupted audio (<i>n = 51</i>), (g) and who were flagged by personality raters as non-compliant (<i>n = 21</i>), the final sample size consisted of 646 subjects.
+                    <LI>Subjects were evenly distributed among men and women (309 men, 309 women, 26 non-binary) and were mainly White (<i>n = 467</i>), Black or African American (<i>n = 73</i>), Hispanic or Latino (<i>n = 46</i>), Asian (<i>n = 30</i>), ‘other’ ethnicities (<i>n = 25</i>), or did not disclose ethnicity (<i>n = 5</i>). The average age of subjects was 36.69 (<i>SD = 11.92</i>), and they had on average 15.96 years of working experience (<i>SD = 11.36</i>). Among subjects, 6 had not finished high-school, 76 were high-school graduates, 220 were college graduates, 233 had a Bachelor’s degree, 89 had a Master’s degree, 16 had a doctorate, and 6 did not disclose education level.
+                </uL>
+                <p></p>
+
+                <h3>Procedure</h3>  <a name="procedure"></a>
+                <uL>
+                    <LI>Subjects applied to a fictitious management traineeship position. Part of the application procedure was to complete an AVI using a platform we developed for the purpose of the study. During the AVI, subjects responded to six interview questions. Two of them were <b><i>generic questions</i></b>, frequently asked in selection interviews. The other four questions were related to the personality traits of <b>Honesty-Humility</b>, <b>Extraversion</b>, <b>Agreeableness</b>, and <b>Conscientiousness</b>, as described by the HEXACO model of personality (i.e, the <b><i>personality questions</i></b>). Subjects were instructed to reply within 1-2 minutes to the interview questions.
+                </uL>
+                <p></p>
+
+                <h3>Interview question development</h3>  <a name="iqd"></a>
                 <ul>
-                    <li><a href="#PS">Track 1: Personality assessment</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/18524" target="_blank">Codalab site</a></li>
-                    <li><a href="#IPA">Track 2: Interview performance assessment</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/19359" target="_blank">Codalab site</a></li>
+                    <li>The interview followed a structured format, since previous literature suggests that structured (vs. non- or semi-structured) interviews have stronger reliability and validity. Subjects always started with the generic questions and proceeded to the personality questions. <a href="challenge.html#tb1">Table 1</a> shows the content, order and type of the six questions and their corresponding personality traits.
+                        <uL>
+                            <li> <b>Generic questions.</b> 
+                                For the development of generic interview questions, we created an initial pool of 86 job interview questions taken from previous literature and a list of frequently asked interview questions provided by a Dutch consultancy company. As a first step, we screened those questions for eligibility. Questions were included if they were (a) open-ended, (b) conveyed personality information to some extent, and (c) could apply to multiple jobs. Questions were excluded if they described specific behaviors, specific jobs, or knowledge, values, and motives. This procedure ended up in retaining 61 questions. 
+                                To assess those 61 questions, we asked 17 professional recruiters from a Dutch consultancy company to assess how frequently they use each of those questions in practice. Responses were given on a 3-point scale. The inter-rater agreement between the recruiters was <i>ICC(2,17) = 0.88</i>. We then asked four personality experts to assess each interview question on a 7-point scale using three criteria. Namely, whether the questions applied to limited or multiple jobs, whether they activated one or more personality traits, as well as provide a general assessment <i>(ICC(2,4) = 0.66)</i>. Then, we calculated the average score per criterion (professional recruiters, personality experts) and excluded all questions that scored below the average (per criterion). This process returned 16 questions which (a) were frequently used by practitioners, (b) were not specific to a particular job, and (c) activated more than one personality traits. Of those 16 questions, we slightly edited and selected two questions that received the highest ratings from recruiters and personality experts.
+                            </li>
+                            <li> <b>Personality questions.</b> 
+                                For the development of personality interview questions, we created an initial pool of 25 past behavior interview questions for the personality traits of Honesty-Humility (<i>n = 6</i>), Extraversion (<i>n = 8</i>), Agreeableness (<i>n = 5</i>), and Conscientiousness (<i>n = 6</i>). The questions were developed to target the core facets of each personality trait. Questions were developed in a past-behavior formal (e.g., “Think of situations when…”) since this type of format are more suited to elicit personality-relevant information according to previous research. 
+                                Four personality experts independently selected one question per personality trait and later discussed any disagreements between them until a consensus was reached, retaining one question per personality trait. After some further editing, we ended up with four personality-related questions (<a href="challenge.html#tb1">Table 1</a>).
+                            </li>
+                       
+                        </uL>
+                </LI>
+                </uL>
+
+                <table border="1" style="width:100%; border-collapse:collapse; text-align:left;" id="tb1">
+                    <caption><b>Table 1.</b> The content, order and type of the interview questions and their corresponding personality traits.</caption>
+                    <thead>
+                      <tr style="background-color:#f2f2f2;">
+                        <th style="padding:8px;">Order</th>
+                        <th style="padding:8px;">Interview question</th>
+                        <th style="padding:8px;">Type</th>
+                        <th style="padding:8px;">Personality Trait</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="padding:8px;">1</th>
+                        <td style="padding:8px;">What would you consider among your greatest strengths and weaknesses as an employee?</td>
+                        <td style="padding:8px;">Generic</td>
+                        <td style="padding:8px;">\</td>
+                      </tr>
+                      <tr>
+                        <th style="padding:8px;">2</th>
+                        <td style="padding:8px;">How would your best friend describe you?</td>
+                        <td style="padding:8px;">Generic</td>
+                        <td style="padding:8px;">\</td>
+                      </tr>
+                      <tr>
+                        <th style="padding:8px;">3</th>
+                        <td style="padding:8px;">Think of situations when you made professional decisions that could affect your status or how much money you make. How do you usually behave in such situations? Why do you think that is?</td>
+                        <td style="padding:8px;">Personality</td>
+                        <td style="padding:8px;">Honesty-Humility</td>
+                      </tr>
+                      <tr>
+                        <th style="padding:8px;">4</th>
+                        <td style="padding:8px;">Think of situations when you joined a new team of people. How do you usually behave when you enter a new team? Why do you think that is?</td>
+                        <td style="padding:8px;">Personality</td>
+                        <td style="padding:8px;">Extraversion</td>
+                      </tr>
+                      <tr>
+                        <th style="padding:8px;">5</th>
+                        <td style="padding:8px;">Think of situations when someone annoyed you. How do you usually react in such situations? Why do you think that is?</td>
+                        <td style="padding:8px;">Personality</td>
+                        <td style="padding:8px;">Agreeableness</td>
+                      </tr>
+                      <tr>
+                        <th style="padding:8px;">6</th>
+                        <td style="padding:8px;">Think of situations when your work or workspace were not very organized. How typical is that of you? Why do you think that is?</td>
+                        <td style="padding:8px;">Personality</td>
+                        <td style="padding:8px;">Conscientiousness</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                
+
+                <p></p>
+                <h3>Annotations</h3>  <a name="annotations"></a>
+                <ul>
+                    <li><b>Personality traits. </b>
+                        Observer reports of personality were provided by a group of 12 raters. Raters followed a 9-hour training. Each subject received eight independent personality ratings. Responses were provided using a Behavioral Anchored Response Scale. The BARS contained four items per personality domain (one item per facet), and responses were given on a 5-point scale (1 = Very low; 5 = Very high), allowing to register up to one decimal point. Personality domain scores were calculated after averaging the four facet scores per domain, across the eight ratings. The inter-rater agreement ranged from ICC(1,8) = 0.61 (Honesty-Humility) to ICC(1,8) = 0.83 (Extraversion).
+                    </li>                   
+                    <li><b>Interview performance.</b>
+                        The job-related competencies were annotated by a group of five professional recruiters. The raters followed a 3-hour training. Raters assessed five job competencies and one overall hireability score after having watched all six interview questions (raters manually rotated the order of questions to avoid ordering effects). The five job competencies were taken from the manual of a Dutch consultancy company. The definitions of the four competencies are shown below:
+                    </li>
+                    <uL>
+
+                            <ol>
+                                <li> 
+                                    <b><i>Integrity: </i></b>
+                                    The extent to which the candidate inspires trust, displays integrity in their interaction with others, treats others fairly, and adheres to high ethical standards.
+                                </li>
+                                <li> 
+                                    <b><i>Collegiality: </i></b>
+                                    The extent to which the candidate is open to and shows an interest in others and is willing to adapt one’s own activities to help others in their work.
+                                </li>
+                                <li> 
+                                    <b><i>Social versatility: </i></b>
+                                    The extent to which the candidate has the ability to adapt one’s own behavior in a wide range of social situations in order to function effectively in different types of companies.
+                                </li>
+                                <li> 
+                                    <b><i>Development orientation: </i></b>
+                                    The extent to which the candidate is willing to exert oneself in order to broaden and deepen knowledge and skills and to gain new experiences in order to grow professionally and increase the quality of one’s own work.
+                                </li>
+                                <li> 
+                                    <b><i>Overall hireability: </i></b>
+                                    The extent to which the candidate would be able to fulfill the requirements of the management traineeship position.
+                                </li>
+                            </ol>
+                    </uL>
+                    
+                </ul>
+                <h3>Dataset split</h3>  <a name="split"></a>
+                <uL>
+                    <LI>The dataset used for the challenge is split into training (70%, <i>n = 452</i>), validation (10%, <i>n = 64</i>), and testing (20%, <i>n = 130</i>) sets. The training and validation sets will be made available to participants for algorithm development. The dataset is divided at the subject level, ensuring that videos from a single subject are assigned exclusively to one of the training, validation, or testing sets. Although the input videos differ between the two tracks (i.e., track 1 uses only videos for answering personality questions, while track 2 uses videos for answering all questions), the split remains consistent across both tracks of our challenge. In splitting the dataset, we consider the distribution of gender, age, and working experience of the subjects. Specifically, we employ joint sampling to ensure that these three sets maintain similar distributions of these demographic and experiential variables. The gender, age, working experience distribution of the training, validation and testing sets are shown in <a href="challenge.html#fig1">Figure 1</a>.
+                </uL>
+                <p></p>
+
+                <span class="image main" id="fig1">
+                    <figure>
+                        <img src="images/data_distribution.png"/>
+                        <figcaption><b>Figure 1.</b> The gender, age, working experience distributions of the training, validation and testing set.</figcaption>
+                    </figure>
+                </span>
+
                 </ul>
             </section>
 
@@ -65,167 +209,36 @@
                     <h2 class="major"><span>Track 1: Personality assessment (PS)</span></h2>
                 </header>
 
-                <p>To facilitate the establishment of robust and transferable ME spotting methods, an unseen cross-cultural long video test set will be used to validate the efficacy of spotting algorithms. By “unseen” and “cross-cultural”, we mean that the data has not been publicly released, and consists of subjects from diverse ethnicities and cultures. All participating algorithms are required to run on this test set and submit their results for spotting micro- and macro-expressions.</p>
+                <p>In this track, participants will develop models and algorithms to assess the personality traits based on subjects' responses to the corresponding personality questions. For example, question 3 is the question to activate the trait of Honesty-Humility. Thus, participants will use the videos of subjects answering question 3 to assess the Honesty-Humility of these subjects. The task of this track is a single-input-single-label regression task. The purpose of the track is to encourage researchers in the multimedia community to advance methodologies for accurately predicting personality traits from standardized psychological data.</p>
 
-                <p>The unseen test set, which was first used in MEGC2023, will contain at least 30 long videos curated from unreleased data of the SAMM and CAS(ME)<sup>3</sup> datasets. Both these datasets have different video frame rates (SAMM: 200 fps; CAS(ME)<sup>3</sup>: 30 fps), which will challenge participants to submit techniques that are also robust toward temporal sampling. For learning-based techniques, participants can use any kind of training set or combination of training sets, from the vast <a href="#training">selection of databases available</a>.</p> 
-
-                <h3>Recommended Training Databases</h3>  <a name="training"></a>
-                <uL>
-                    <LI><b>SAMM Long Videos with 147 long videos at 200 fps (average duration: 35.5s).</b>
-                        <uL>
-                            <li> To download the dataset, please visit: <a
-                                    href="http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php">http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php</a>.
-                                Download and fill in the license agreement form, email to <a href="M.Yap@mmu.ac.uk">M.Yap@mmu.ac.uk</a>
-                                with email subject: SAMM long videos.
-                            </li>
-                            <li>
-                                Reference: Yap, C. H., Kendrick, C., & Yap, M. H. (2020, November). SAMM long videos: A
-                                spontaneous facial micro-and macro-expressions dataset. In 2020 15th IEEE International
-                                Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 771-776). IEEE.
-                            </li>
-                        </uL>
-
-                    <LI><b> CAS(ME)<sup>2</sup> with 97 long videos at 30 fps (average duration: 148s).</b>
-                        <uL>
-                            <li> To download the dataset, please visit: <a
-                                    href="http://casme.psych.ac.cn/casme/e3">http://casme.psych.ac.cn/casme/e3</a>.  Download and fill in the license agreement form, submit throuth the website.
-                            >.
-                            </li>
-                            <li>
-                                Reference: Qu, F., Wang, S. J., Yan, W. J., Li, H., Wu, S., & Fu, X. (2017). CAS (ME) $^
-                                2$: a database for spontaneous macro-expression and micro-expression spotting and
-                                recognition. IEEE Transactions on Affective Computing, 9(4), 424-436.
-                            </li>
-
-                        </uL>
-
-                    <LI><b>SMIC-E-long with 162 long videos at 100 fps (average duration: 22s).</b>
-                        <uL>
-                            <li> To download the dataset, please visit: <a href="https://www.oulu.fi/cmvs/node/41319">https://www.oulu.fi/cmvs/node/41319</a>.
-                                Download and fill in the license agreement form (please indicate which version/subset
-                                you need), email to <a href="Xiaobai.Li@oulu.fi">Xiaobai.Li@oulu.fi</a>.
-                            </li>
-                            <li>
-                                Reference: Tran, T. K., Vo, Q. N., Hong, X., Li, X., & Zhao, G. (2021). Micro-expression
-                                spotting: A new benchmark. Neurocomputing, 443, 356-368.
-                            </li>
-                        </uL>
-                    <LI><b> CAS(ME)<sup>3</sup> with 1300 long videos at 30 fps (average duration: 98s).</b>
-                        <uL>
-                            <li> To download the dataset, please visit: <a
-                                    href="http://casme.psych.ac.cn/casme/e4">http://casme.psych.ac.cn/casme/e4</a>.
-                                Download and fill in the license agreement form, submit throuth the website.
-                            </li>
-                            <li>
-                                Reference: Li, J., Dong, Z., Lu, S., Wang, S. J., Yan, W. J., Ma, Y., ... & Fu, X. (2022). CAS (ME)<sup>3</sup>: A third generation facial spontaneous micro-expression database with depth information and high ecological validity. IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 2782-2800, doi: 10.1109/TPAMI.2022.3174895..
-                            </li>
-
-                        </uL>
-                    <LI><b> 4DME with 270 long videos at 60 fps (average duration: 2.5s).</b>
-                        <uL>
-                            <li> To download the dataset, please visit: <a
-                                    href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis">https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis</a>.
-                                Download and fill in the license agreement form , email to <a href="Xiaobai.Li@oulu.fi">Xiaobai.Li@oulu.fi</a>.
-                            </li>
-                            <li>
-                                Reference: Li, X., Cheng, S., Li, Y., Behzad, M., Shen, J., Zafeiriou, S., ... & Zhao, G. (2022). 4DME: A spontaneous 4D micro-expression dataset with multimodalities. IEEE Transactions on Affective Computing.
-                            </li>
-
-                        </uL>
-
-
-                </uL>
-                <p></p>
-
-                <h3>Unseen Test Dataset</h3>  <a name="test"></a>
-                <ul>
-                    <li>This year, we will be using the same unseen cross-cultural long-video test set as MEGC2023 to evaluate spotting algorithms' performances in a fairer manner.
-
-                    <li>The unseen testing set (<code><b>MEGC2023-testSet</b></code>) contains 30 long video, including 10 long videos from
-                        SAMM
-                        (SAMM Challenge dataset) and 20 clips cropped from different videos in CAS(ME)<sup>3</sup> (unreleased before). The
-                        frame rate for SAMM Challenge dataset is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30 fps. The participants should test on this unseen dataset.
-                    <LI>To obtain the <code><b>MEGC2023-testSet</b></code>, download and fill in the <a
-                            href="files/SAMM_ReleaseAgreementV2.pdf">license agreement form of SAMM Challenge
-                        dataset</a> and
-                        the <a href="files/CAS3_clip_ReleaseAgreement.pdf">license agreement form of CAS(ME)<sup>3</sup>_clip</a>,
-                        upload the file through this
-                        link: <a href="https://www.wjx.top/vm/PpmFKf7.aspx# ">https://www.wjx.top/vm/PpmFKf7.aspx# </a>.
-
-                        <uL>
-                            <li> For the request from a bank or company, the participants are required to ask their director or
-                                CEO to sign the form.
-                            </li>
-                            <li> Reference:
-                                <ol>
-                                    <li> Li, J., Dong, Z., Lu, S., Wang, S.J., Yan, W.J., Ma, Y., Liu, Y., Huang, C. and
-                                        Fu, X. (2023). CAS(ME)<sup>3</sup>: A Third Generation Facial Spontaneous
-                                        Micro-Expression Database with Depth Information and High Ecological Validity.
-                                        <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, vol. 45, no. 3, pp. 2782-2800, 1 March 2023, doi: 10.1109/TPAMI.2022.3174895.
-                                    </li>
-                                    <li> Davison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A
-                                        spontaneous micro-facial movement dataset. <i>IEEE Transactions on Affective
-                                        Computing</i>, 9(1),
-                                        116-129.
-                                    </li>
-                                </ol>
-
-                            </li>
-
-
-                        </uL>
-                </LI>
-                </uL>
-
-                <p></p>
-                <h3>Evaluation Protocol</h3>  <a name="PS-eval"></a>
+                <a name="IPA-eval"></a>
+                <h3>Evaluation Protocol</h3>
                 <ul>
                     <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should test their proposed algorithm on the unseen dataset by uploading the predicted result
-                        to the <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/18524)</a> where the evaluation metrics will be calculated.
+                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
+                        where specific evaluation metrics will be calculated.
                     </li>
-                    <li><b>Evaluation metrics</b>: F1-Score (Overall, SAMM, CAS), Precision (Overall, SAMM, CAS), Recall (Overall, SAMM, CAS)</li>
+                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
+                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
+                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
+                        <ul>
+                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
+                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
+                        </ul>
+                    </li>
                     <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
                         <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>3</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM samples)</li>
+                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
+                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
                         </ul>
                     </li>
-                    <li>An example submission is provided here: <a href="files/example_submission.zip">example_submission</a>
-                           and <a href="files/example_submission_withoutExpType.zip">example_submission_withoutExpType</a>.
-                    </li>
-                    <li>Note: For submissions without labelling expression type (me or mae), the labelling
-                        will be done automatically using ME threshold of 0.5s (15 frames for CAS and 100
-                        frames for SAMM).
-                    </li>
+                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_IPA</a>.</li>
+                    <li>The evaluation script is available at <a href="https://github.com/genbing99/STRS-Metric">https://github.com/genbing99/STRS-Metric</a>.</li>
                     <li>The <b>baseline</b> method can be found in the following paper (please cite): 
                         <br/>
-                        Zhang, L. W., Li, J., Wang, S. J., Duan, X. H., Yan, W. J., Xie, H. Y., & Huang, S. C. (2020, November). Spatio-temporal fusion for macro-and micro-expression spotting in long video sequences. In 2020 15th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 734-741). IEEE.
-                        <br>
-                        while previous submissions to MEGC2023 can be found here: <a
-                            href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a>
+                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
                     </li>        
-                </ul>
-                    <!--
-                    <Li><b>submission stage</b>: TBD
-                        <ul>
-                            <li> The participants could upload the result and then the Leaderboards will
-                                calculate the metrics.
-
-                            <li> The evaluation result of other participants and the ranking will not be provided
-                                during this stage. You could compare your result with the provided baseline result.
-                            </li>
-                        </ul>
-                    <Li><b>Live Leaderboard stage</b>: TBD
-                        <ul>
-                            <li> Results uploaded after submission deadline will not be considered by ACM MEGC2023 for the
-                                final ranking of the competition.
-                            <li>However, any research team interested in the spotting task can upload results to
-                                validate the performance of their method.
-                            <li> The leaderboard will calculate and display the uploaded results and real-time
-                                ranking.
-                        </ul>
-                    -->
                 </ul>
             </section>
             
@@ -236,21 +249,8 @@
                     <h2 class="major"><span>Track 2: Interview performance assessment (IPA)</span></h2>
                 </header>
 
-                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
-                </p>
+                <p>In this track, participants are tasked with developing models and algorithms to evaluate five job-related competencies using videos in which subjects respond to both generic and personality questions. The task of this track is a multi-input-multi-label regression task. This track serves as a simulation of automated interview evaluation, with the aim of encouraging researchers in the multimedia community to create algorithms that can automatically assess interview performance based on candidates' responses to job-related questions. Such advancements are expected to streamline the recruitment process and improve hiring efficiency, facilitating the preliminary screening of candidates who align with job requirements from a large applicant pool.</p>
                     
-                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
-                The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#IPA-eval">selected metrics</a>.</p> 
-
-                Reference:
-                    <ul>
-                        <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                            of long videos.
-                         <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
-                         </li>
-                     </ul>
-
-                <p></p>
                 <a name="IPA-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
@@ -287,8 +287,8 @@
                 <a name="submission"></a>
                 <h2 class="major"><span>Submission</span></h2>
                 <ul>
-                    <li><b>Challenge submission platform for PS task: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
-                    <li><b>Challenge submission platform for STR task: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>                
+                    <li><b>Challenge submission platform for Track 1: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
+                    <li><b>Challenge submission platform for Track 2: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>                
                     <li><b>Submission guidelines:</b>
                         <ul>
                             <li>Submitted papers (.pdf format) must use the ACM Article Template <a
