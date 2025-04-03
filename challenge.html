@@ -35,10 +35,12 @@
                 <li><a href="challenge.html#DS">Dataset</a></li>
                 <li><a href="challenge.html#PS">Track 1: Personality assessment</a></li>
                 <li><a href="challenge.html#IPA">Track 2: Interview performance assessment</a></li>
+                <li><a href="challenge.html#EM">Evaluation metric</a></li>
+                <li><a href="challenge.html#SUB">Submission</a></li>
                 <li><a href="challenge.html#questions">Frequently Asked Questions</a></li>
             </ul>
             </li>
-            <li><a href="dates.html">Registration</a></li>
+            <li><a href="registration.html">Registration</a></li>
             <li><a href="dates.html">Important Dates</a></li>
             <li><a href="info.html">Info for Participants</a></li>
             <li><a href="organisers.html">Organisation</a></li>
@@ -68,8 +70,7 @@
 
                 <h3>Subjects</h3>  <a name="subject"></a>
                 <uL>
-                    <LI>The dataset consisted of video interview data from 646 subjects. Subjects (<i>n = 793</i>) were recruited through the online platform Prolific. After excluding subjects (a) with incomplete responses (<i>n = 40</i>), (b) who did not consent for their data to be shared (<i>n = 10</i>), (c) who did not pass the attention checks (<i>n = 7</i>), (d) whose variation in personality (HEXACO) items was either too large or too small (<i>n = 6</i>), (e) who self-reported that they did not take the study seriously (<i>n = 12</i>), (f) whose videos contained corrupted audio (<i>n = 51</i>), (g) and who were flagged by personality raters as non-compliant (<i>n = 21</i>), the final sample size consisted of 646 subjects.
-                    <LI>Subjects were evenly distributed among men and women (309 men, 309 women, 26 non-binary) and were mainly White (<i>n = 467</i>), Black or African American (<i>n = 73</i>), Hispanic or Latino (<i>n = 46</i>), Asian (<i>n = 30</i>), ‘other’ ethnicities (<i>n = 25</i>), or did not disclose ethnicity (<i>n = 5</i>). The average age of subjects was 36.69 (<i>SD = 11.92</i>), and they had on average 15.96 years of working experience (<i>SD = 11.36</i>). Among subjects, 6 had not finished high-school, 76 were high-school graduates, 220 were college graduates, 233 had a Bachelor’s degree, 89 had a Master’s degree, 16 had a doctorate, and 6 did not disclose education level.
+                    <LI>The dataset consisted of video interview data from 644 subjects (307 men, 309 women, 28 non-binary). Subjects (<i>n = 793</i>) were recruited through the online platform Prolific. After excluding subjects (a) with incomplete responses (<i>n = 40</i>), (b) who did not consent for their data to be shared (<i>n = 10</i>), (c) who did not pass the attention checks (<i>n = 7</i>), (d) whose variation in personality (HEXACO) items was either too large or too small (<i>n = 6</i>), (e) who self-reported that they did not take the study seriously (<i>n = 12</i>), (f) whose videos contained corrupted audio (<i>n = 51</i>), (g) and who were flagged by personality raters as non-compliant (<i>n = 23</i>), the final sample size consisted of 644 subjects.
                 </uL>
                 <p></p>
 
@@ -184,6 +185,38 @@
                     </uL>
                     
                 </ul>
+
+                <h3>Data description</h3>  <a name="data_description"></a>
+                <ul>
+                    <li><b>Video index: </b>The dataset contains videos of participants who answer <b>2 generic questions</b> and <b>4 personality questions</b>. For each personality question, there is a corresponding personality trait rated by psychologists. The filename of the video is organized as: 
+                        <p style="text-align:center">"participant id_quesition index_question type"</p>
+                        For example, the filename "<b><i>5484821efdf99b07b28f2300_q1_generic.mp4</i></b>" means:
+                        <uL>
+                            <li> <b>participant id:</b> 5484821efdf99b07b28f2300
+                            </li>
+                            <li> <b>question index:</b> q1
+                            </li>
+                            <li> <b>question type:</b> generic
+                            </li>
+                        </uL>
+                        The question index and the corresponding personality trait are listed as shown in <a href="challenge.html#tb1">Table 1</a>. For example, the question “q3” is asked to activate the personality trait of “Honesty-Humility”. 
+                    </li>
+                    <li><b>Ground truth labels: </b>
+                        The <b><i>train_data.csv</i></b> and <b><i>val_data.csv</i></b> contain the ground truth labels for training and validating recognition models respectively. The csv files also include the meta information of the interviewees. You may use this meta information as additional information for recognition for both of tracks. 
+                        <ul>
+                            <li>
+                                <b>age</b>; <b>gender</b>: 1 = Male; 2 = Female; 3 = Non-binary/third gender; 4 = Prefer not to say;
+                            </li>
+                            <li>
+                                <b>education</b>: 1 = Less than high school; 2 = High school graduate; 3 = Some college; 4 = Bachelor degree or equivalent; 5 = Master's degree or equivalent; 6 = Doctorate; 7 = Prefer not to say
+                            </li>
+                            <li>
+                                <b>work experience</b>: How many years of work experience do you have?
+                            </li>
+                        </ul>
+                    </li>
+                </uL>
+
                 <h3>Dataset split</h3>  <a name="split"></a>
                 <uL>
                     <LI>The dataset used for the challenge is split into training (70%, <i>n = 452</i>), validation (10%, <i>n = 64</i>), and testing (20%, <i>n = 130</i>) sets. The training and validation sets will be made available to participants for algorithm development. The dataset is divided at the subject level, ensuring that videos from a single subject are assigned exclusively to one of the training, validation, or testing sets. Although the input videos differ between the two tracks (i.e., track 1 uses only videos for answering personality questions, while track 2 uses videos for answering all questions), the split remains consistent across both tracks of our challenge. In splitting the dataset, we consider the distribution of gender, age, and working experience of the subjects. Specifically, we employ joint sampling to ensure that these three sets maintain similar distributions of these demographic and experiential variables. The gender, age, working experience distribution of the training, validation and testing sets are shown in <a href="challenge.html#fig1">Figure 1</a>.
@@ -204,116 +237,57 @@
             <section>
                 <a name="PS"></a>
                 <header class="main">
-                    <h2 class="major"><span>Track 1: Personality assessment (PS)</span></h2>
+                    <h2 class="major"><span>Track 1: Personality assessment</span></h2>
                 </header>
 
-                <p>In this track, participants will develop models and algorithms to assess the personality traits based on subjects' responses to the corresponding personality questions. For example, question 3 is the question to activate the trait of Honesty-Humility. Thus, participants will use the videos of subjects answering question 3 to assess the Honesty-Humility of these subjects. The task of this track is a single-input-single-label regression task. The purpose of the track is to encourage researchers in the multimedia community to advance methodologies for accurately predicting personality traits from standardized psychological data.</p>
-
-                <a name="IPA-eval"></a>
-                <h3>Evaluation Protocol</h3>
-                TBD
-                <!-- <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
-                        where specific evaluation metrics will be calculated.
+                <p>In this track, you will develop models and algorithms to assess personality traits based on subjects' responses to the questions which are designed by psychologists to activate the corresponding personality traits. The task of this track is a <b>single-input-single-label regression task</b>. Below is an example for training models:</p>
+                <ul>
+                    <li><b>Input video: </b>
+                        “5484821efdf99b07b28f2300_q3_personality.mp4”
                     </li>
-                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
-                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
-                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
-                        <ul>
-                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
-                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
-                        </ul>
+                    <li><b>Corresponding personality trait: </b>
+                        q3->Honesty-Humanity
                     </li>
-                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
-                        <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
-                        </ul>
+                    <li><b>Label (personality trait): </b>
+                        3.5
                     </li>
-                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_IPA</a>.</li>
-                    <li>The evaluation script is available at <a href="https://github.com/genbing99/STRS-Metric">https://github.com/genbing99/STRS-Metric</a>.</li>
-                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
-                        <br/>
-                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
-                    </li>        
-                </ul> -->
+                </ul>
+                The range of the personality trait ratings is [1,5]. Please note that you may also use videos which contain information from other personality traits for recognition. However, it should be stated clearly in the report you submit.
+               
             </section>
             
             <!-- Track 2 IPA Section -->
             <section>
                 <a name="IPA"></a>
                 <header class="main">
-                    <h2 class="major"><span>Track 2: Interview performance assessment (IPA)</span></h2>
+                    <h2 class="major"><span>Track 2: Interview performance assessment</span></h2>
                 </header>
 
-                <p>In this track, participants are tasked with developing models and algorithms to evaluate five job-related competencies using videos in which subjects respond to both generic and personality questions. The task of this track is a multi-input-multi-label regression task. This track serves as a simulation of automated interview evaluation, with the aim of encouraging researchers in the multimedia community to create algorithms that can automatically assess interview performance based on candidates' responses to job-related questions. Such advancements are expected to streamline the recruitment process and improve hiring efficiency, facilitating the preliminary screening of candidates who align with job requirements from a large applicant pool.</p>
-                    
-                <a name="IPA-eval"></a>
-                <h3>Evaluation Protocol</h3>
-                TBD
-                <!-- <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
-                        where specific evaluation metrics will be calculated.
+                <p>In this track, you are tasked with developing models and algorithms to evaluate five job-related competencies (i.e., Integrity, Collegiality, Social versatility, Development orientation and Overall hireability) using videos in which subjects respond to both generic and personality questions. The task of this track is a <b>multi-input-multi-label regression task</b>. The range of the job-related competencies ratings is also [1,5] Below is an example for training models:</p>
+                <ul>
+                    <li><b>Input video: </b>
+                        “60fccc84440f8e8c82ca0288_q1_generic.mp4”; “60fccc84440f8e8c82ca0288_q2_generic.mp4”; “60fccc84440f8e8c82ca0288_q3_personality.mp4”; “60fccc84440f8e8c82ca0288_q4_ personality.mp4”; “60fccc84440f8e8c82ca0288_q5_ personality.mp4”; “60fccc84440f8e8c82ca0288_q6_ personality.mp4”.
                     </li>
-                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
-                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
-                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
-                        <ul>
-                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
-                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
-                        </ul>
+                    <li><b>Label: </b>
+                        [Integrity, Collegiality, Social_versatility, Development_orientation, Hireability] = [4,3.9,4,4.3,4.5]
                     </li>
-                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
-                        <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
-                        </ul>
-                    </li>
-                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_IPA</a>.</li>
-                    <li>The evaluation script is available at <a href="https://github.com/genbing99/STRS-Metric">https://github.com/genbing99/STRS-Metric</a>.</li>
-                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
-                        <br/>
-                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
-                    </li>        
-                </ul> -->
+                </ul>
+            </section>
+
+            <!-- Evaluation Section -->
+            <section>
+                <a name="EM"></a>
+                <h2 class="major"><span>Evaluation metric</span></h2>
+                For the AVI Challenge 2025, the primary evaluation metric for model performance will be <b>Mean Squared Error (MSE)</b>. We will use the mean MSE of all personality traits and job-related competencies to evaluate the performance of the models submitted to the challenge.
+                <p style="text-align:center; color:darkgrey">If you have any questions, please send your question to t.zhang@seu.edu.cn</p>
             </section>
 
             <!-- Submission Section -->
             <section>
-                <a name="submission"></a>
+                <a name="SUB"></a>
                 <h2 class="major"><span>Submission</span></h2>
                 TBD
-                <!-- <ul>
-                    <li><b>Challenge submission platform for Track 1: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
-                    <li><b>Challenge submission platform for Track 2: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>                
-                    <li><b>Submission guidelines:</b>
-                        <ul>
-                            <li>Submitted papers (.pdf format) must use the ACM Article Template <a
-                                href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
-                                as used by regular ACM MM submissions. Please use the template in traditional <b>double-column
-                                format</b> to prepare your submissions. For example, word users may use Word Interim
-                                Template, and latex users may use <b>sample-sigconf</b> template.
-                            <li>Grand challenge papers will go through a single-blind review process. Each grand
-                                challenge paper submission is limited to 4 pages with 1-2 extra pages for references only.
-                            <li>For all other required files besides the paper, please submit in a
-                                single zip file and upload to the submission system as supplementary material. It is compulsory to include:
-                                <ul>
-                                    <li>GitHub repository URL containing codes of your implemented method, and all other
-                                        relevant files such as feature/parameter data.</li>
-                                    <li>CSV files reporting the results, i.e.
-                                        <code>cas_pred.csv</code>, <code>samm_pred.csv</code> (for both PS and IPA)</li>
-                                </ul>
-                                The organizers have the right to reject any submissions that: 1) are not accompanied by a paper,
-                                2) did not share the code repository and reported results for verification purposes. 
-                            </li>
-                        </uL>
 
-                </li>
-                </ul> -->
             </section>
 
             
