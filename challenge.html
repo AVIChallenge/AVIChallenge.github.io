@@ -6,7 +6,7 @@
 -->
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Grand Challenge | AVI2025</title>
+    <title>Grand Challenge | AVI2026</title>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
     <link href="assets/css/main.css" rel="stylesheet"/>
@@ -19,8 +19,8 @@
     <header id="header">
         <div class="logo container">
             <div>
-                <h1><a href="index.html" id="logo">ACM Multimedia AVI Challenge 2025 </a></h1>
-                <p><br>Assessing Personality Traits and Interview Performance from Asynchronous Video Interviews</p>
+                <h1><a href="index.html" id="logo">ACM Multimedia AVI Challenge 2026 </a></h1>
+                <p><br>Assessing True Personality Traits and Cognitive Ability from Asynchronous Video Interviews</p>
             </div>
         </div>
     </header>
@@ -29,14 +29,12 @@
     <nav id="nav">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="challenge.html">AVI Challenge 2025</a>
+            <li class="current"><a href="challenge.html">AVI Challenge 2026</a>
             <ul>
                 <li><a href="challenge.html#OV">Overview</a></li>
                 <li><a href="challenge.html#DS">Dataset</a></li>
-                <li><a href="challenge.html#PS">Track 1: Personality assessment</a></li>
-                <li><a href="challenge.html#IPA">Track 2: Interview performance assessment</a></li>
-                <li><a href="challenge.html#EM">Evaluation metric</a></li>
-                <li><a href="challenge.html#SUB">Submission</a></li>
+                <li><a href="challenge.html#PS">Track 1: True personality assessment</a></li>
+                <li><a href="challenge.html#IPA">Track 2: Cognitive ability assessment</a></li>
             </ul>
             </li>
             <li><a href="registration.html">Registration</a></li>
@@ -54,9 +52,7 @@
             <section>
                 <h2 class="major"><span>Overview</span></h2>
                 <a name="OV"></a>
-                AVI Challenge 2025 consists of two tracks: the <a href="challenge.html#PS">personality assessment track</a> and the <a href="challenge.html#IPA">interview performance assessment track</a>. Track 1 focuses on evaluating subjects' personality traits based on their responses to corresponding <b>personality questions</b>. Track 2 concentrates on using multimodal information from subjects' responses to <b>all questions (i.e., including both generic and personality questions)</b> to assess their job-related competencies and interview performance.
-
-
+                AVI Challenge 2026 consists of two tracks: the <a href="challenge.html#PS">true personality assessment track</a> and the <a href="challenge.html#IPA">cognitive ability assessment track</a>. Track 1 focuses on evaluating subjects' self-reported personality traits based on their responses to corresponding <b>personality questions</b>. Track 2 concentrates on using multimodal information from subjects' responses to <b>all questions (i.e., including both generic and personality questions)</b> to assess their cognitive ability.
                 <br/>
             </section>
 
@@ -151,34 +147,29 @@
                 <p></p>
                 <h3>Annotations</h3>  <a name="annotations"></a>
                 <ul>
-                    <li><b>Personality traits. </b>
-                        Observer reports of personality were provided by a group of 12 raters. Raters followed a 9-hour training. Each subject received eight independent personality ratings. Responses were provided using a Behavioral Anchored Response Scale. The BARS contained four items per personality domain (one item per facet), and responses were given on a 5-point scale (1 = Very low; 5 = Very high), allowing to register up to one decimal point. Personality domain scores were calculated after averaging the four facet scores per domain, across the eight ratings. The inter-rater agreement ranged from ICC(1,8) = 0.61 (Honesty-Humility) to ICC(1,8) = 0.83 (Extraversion).
+                    <li><b> True personality traits. </b>
+                        Self-reported personality traits were collected directly from the participants using validated inventories. Prior to the interview, each subject completed a comprehensive self-assessment based on the HEXACO model. Responses were provided using a Behavioral Anchored Response Scale (BARS), which was adapted for self-perception. The BARS contained four items per personality domain (one item per facet), and participants recorded their responses on a 5-point scale (1 = Very low; 5 = Very high), with the precision of one decimal point. Personality domain scores were calculated by averaging the four constituent facet scores.
                     </li>                   
-                    <li><b>Interview performance.</b>
-                        The job-related competencies were annotated by a group of five professional recruiters. The raters followed a 3-hour training. Raters assessed five job competencies and one overall hireability score after having watched all six interview questions (raters manually rotated the order of questions to avoid ordering effects). The five job competencies were taken from the manual of a Dutch consultancy company. The definitions of the four competencies are shown below:
+                    <li><b>Cognitive ability.</b>
+                        Cognitive ability was assessed through a multi-dimensional psychometric test administered to all candidates. The assessment comprised 28 items categorized into four distinct tasks. Following the assessment, professional psychologists conducted a comprehensive evaluation of the candidates' responses. To ensure practical utility for recruitment modeling, scores were synthesized and categorized into a three-tier ordinal scale: <b>Low</b>, <b>Medium</b>, and <b>High</b> level. This expert-led classification ensures that the ground truth reflects not just raw accuracy, but a holistic psychometric interpretation of the candidate's intellectual potential.
                     </li>
                     <uL>
-
                             <ol>
                                 <li> 
-                                    <b><i>Integrity: </i></b>
-                                    The extent to which the candidate inspires trust, displays integrity in their interaction with others, treats others fairly, and adheres to high ethical standards.
+                                    <b><i>Verbal reasoning (16 items): </i></b>
+                                    These items evaluate the ability to comprehend, analyze, and manipulate complex verbal and numerical information. For instance, questions such as "What number is one-fifth of one-fourth of one-ninth of 900?" assess deductive reasoning and the capacity to process sequential logical constraints.
                                 </li>
                                 <li> 
-                                    <b><i>Collegiality: </i></b>
-                                    The extent to which the candidate is open to and shows an interest in others and is willing to adapt one’s own activities to help others in their work.
+                                    <b><i>Letter-number series (4 items): </i></b>
+                                    This task focuses on inductive reasoning and pattern recognition. Candidates are required to identify the underlying rule in an alphanumeric sequence, such as "K, N, P, S, U, ...," reflecting their ability to discern abstract relationships within structured data.
                                 </li>
                                 <li> 
-                                    <b><i>Social versatility: </i></b>
-                                    The extent to which the candidate has the ability to adapt one’s own behavior in a wide range of social situations in order to function effectively in different types of companies.
+                                    <b><i>Matrix reasoning (4 items): </i></b>
+                                    Utilizing non-verbal, visuospatial stimuli, this section assesses fluid intelligence. Candidates must complete a logical pattern (e.g., "Select the best answer to complete the figure below"), measuring their ability to solve novel problems without relying on prior linguistic or cultural knowledge.
                                 </li>
                                 <li> 
-                                    <b><i>Development orientation: </i></b>
-                                    The extent to which the candidate is willing to exert oneself in order to broaden and deepen knowledge and skills and to gain new experiences in order to grow professionally and increase the quality of one’s own work.
-                                </li>
-                                <li> 
-                                    <b><i>Overall hireability: </i></b>
-                                    The extent to which the candidate would be able to fulfill the requirements of the management traineeship position.
+                                    <b><i>Three-dimensional rotation (4 items): </i></b>
+                                    This task specifically targets visuospatial processing and mental manipulation. By asking candidates to identify the correct rotation of a labeled cube (e.g., "Select the choice that could represent a rotation of the cube X"), the test evaluates the ability to form and transform mental representations of complex objects.
                                 </li>
                             </ol>
                     </uL>
@@ -187,7 +178,7 @@
 
                 <h3>Data description</h3>  <a name="data_description"></a>
                 <ul>
-                    <li><b>Video index: </b>The dataset contains videos of participants who answer <b>2 generic questions</b> and <b>4 personality questions</b>. For each personality question, there is a corresponding personality trait rated by psychologists. The filename of the video is organized as: 
+                    <li><b>Video index: </b>The dataset contains videos of participants who answer <b>2 generic questions</b> and <b>4 personality questions</b>. For each personality question, there is a corresponding personality trait rated by themselves. The filename of the video is organized as: 
                         <p style="text-align:center">"participant id_quesition index_question type"</p>
                         For example, the filename "<b><i>5484821efdf99b07b28f2300_q1_generic.mp4</i></b>" means:
                         <uL>
@@ -236,10 +227,10 @@
             <section>
                 <a name="PS"></a>
                 <header class="main">
-                    <h2 class="major"><span>Track 1: Personality assessment</span></h2>
+                    <h2 class="major"><span>Track 1: True personality assessment</span></h2>
                 </header>
 
-                <p>In this track, you will develop models and algorithms to assess personality traits based on subjects' responses to the questions which are designed by psychologists to activate the corresponding personality traits. The task of this track is a <b>single-input-single-label regression task</b>. Below is an example for training models:</p>
+                <p>In this track, you will develop models and algorithms to assess the self-reported personality traits based on subjects' responses to the corresponding personality questions. The task of this track is a <b>single-input-single-label regression task</b>. Below is an example for training models:</p>
                 <ul>
                     <li><b>Input video: </b>
                         “5484821efdf99b07b28f2300_q3_personality.mp4”
@@ -254,7 +245,8 @@
                 The range of the personality trait ratings is [1,5]. Please note that you may also use videos which contain information from other personality traits for recognition. However, it should be stated clearly in the report you submit.
                
                 <p>
-                    <br>Codalab link: <a href="https://codalab.lisn.upsaclay.fr/competitions/23100">https://codalab.lisn.upsaclay.fr/competitions/23100</a>
+                    <b>Evaluation metric: </b>The primary evaluation metric is <b>Mean Squared Error (MSE)</b>.
+                    <!-- <br>Codalab link: <a href="https://codalab.lisn.upsaclay.fr/competitions/23100">https://codalab.lisn.upsaclay.fr/competitions/23100</a> -->
                 </p>
                
             </section>
@@ -263,40 +255,24 @@
             <section>
                 <a name="IPA"></a>
                 <header class="main">
-                    <h2 class="major"><span>Track 2: Interview performance assessment</span></h2>
+                    <h2 class="major"><span>Track 2: Cognitive ability assessment</span></h2>
                 </header>
 
-                <p>In this track, you are tasked with developing models and algorithms to evaluate five job-related competencies (i.e., Integrity, Collegiality, Social versatility, Development orientation and Overall hireability) using videos in which subjects respond to both generic and personality questions. The task of this track is a <b>multi-input-multi-label regression task</b>. The range of the job-related competencies ratings is also [1,5] Below is an example for training models:</p>
+                <p>In this track, participants are tasked with developing models and algorithms to infer a candidate's cognitive ability from their asynchronous video interview responses. This track is formulated as an ordinal classification task, where models must categorize each candidate into one of three levels: <b>Low</b>, <b>Medium</b>, or <b>High</b>. The task of this track is a <b>multi-input-single-label classification task</b>. Below is an example for training models:</p>
                 <ul>
                     <li><b>Input video: </b>
                         “60fccc84440f8e8c82ca0288_q1_generic.mp4”; “60fccc84440f8e8c82ca0288_q2_generic.mp4”; “60fccc84440f8e8c82ca0288_q3_personality.mp4”; “60fccc84440f8e8c82ca0288_q4_ personality.mp4”; “60fccc84440f8e8c82ca0288_q5_ personality.mp4”; “60fccc84440f8e8c82ca0288_q6_ personality.mp4”.
                     </li>
                     <li><b>Label: </b>
-                        [Integrity, Collegiality, Social_versatility, Development_orientation, Hireability] = [4,3.9,4,4.3,4.5]
+                        Medium
                     </li>
                 </ul>
 
                 <p>
-                    <br>Codalab link: <a href="https://codalab.lisn.upsaclay.fr/competitions/23101">https://codalab.lisn.upsaclay.fr/competitions/23101</a>
+                    <b>Evaluation metric: </b>The primary evaluation metric is <b>Accuracy (Acc)</b>.
+                    <!-- <br>Codalab link: <a href="https://codalab.lisn.upsaclay.fr/competitions/23101">https://codalab.lisn.upsaclay.fr/competitions/23101</a> -->
                 </p>
             </section>
-
-            <!-- Evaluation Section -->
-            <section>
-                <a name="EM"></a>
-                <h2 class="major"><span>Evaluation metric</span></h2>
-                For the AVI Challenge 2025, the evaluation metric for model performance is <b>Mean Squared Error (MSE)</b>. We will use the mean MSE of all personality traits and job-related competencies to evaluate the performance of the models submitted to the challenge.
-                <p style="text-align:center; color:darkgrey">If you have any questions, please send your question to t.zhang@seu.edu.cn</p>
-            </section>
-
-            <!-- Submission Section -->
-            <section>
-                <a name="SUB"></a>
-                <h2 class="major"><span>Submission</span></h2>
-                Will be announced after the testing phase.
-
-            </section>
-
         </div>
     </section>
     <footer id="footer">
@@ -304,7 +280,7 @@
         <div id="copyright">
             <ul class="menu">
                 <li>GET IN TOUCH: t.zhang@seu.edu.cn</li>
-                <li>&copy; AVI2025. All rights reserved</li>
+                <li>&copy; AVI2026. All rights reserved</li>
             </ul>
         </div>
 
