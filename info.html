@@ -86,6 +86,28 @@
 							<li><b>Presentation policy:</b> ACM Multimedia 2026 is an on-site event only. This means that all papers and contributions must be presented by a physical person on-site; remote presentations will not be hosted or allowed. Papers and contributions not presented on-site will be considered a no-show and removed from the proceedings of the conference. More details will be provided to handle unfortunate situations in which none of the authors would be able to attend the conference physically.
                             </li>
 
+							<br>
+<h2 class="major"><span>Paper Recommendation Policy</span></h2>
+
+<li><b>Automatic Qualification:</b> The first-place winner of each individual track will automatically receive a recommendation for a Main Track paper submission.</li>
+
+<li><b>Third Recommendation Slot:</b> The third recommendation slot is awarded to the team with the highest <b>Composite Score</b>, which measures the relative performance gap between a team and the winners of both tracks (excluding the track winners themselves).
+    <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.02); border-left: 4px solid #ed786a; font-family: 'Courier New', Courier, monospace;">
+        <strong>Score Calculation:</strong><br>
+        $score = 0.5 \times \frac{mse_1}{mse_i - mse_1} + 0.5 \times \frac{acc_1}{acc_1 - acc_i}$
+        <br><br>
+        <small>*All scores are rounded to four decimal places.</small>
+    </div>
+</li>
+
+<li><b>Tie-breaking Rules:</b> In the event of a tie in the composite score, the following criteria will be applied sequentially:
+    <ol style="margin-left: 2em; margin-top: 10px;">
+        <li><b>Average Rank:</b> The lower the average rank across both tracks, the higher the standing.</li>
+        <li><b>Submission Count:</b> The team with fewer test set submissions will be ranked higher.</li>
+        <li><b>Submission Timestamp:</b> The team that achieved their best result earlier (upload time) will be ranked higher.</li>
+    </ol>
+</li>
+
                         </section>
 
 
