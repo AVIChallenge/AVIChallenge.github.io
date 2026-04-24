@@ -89,24 +89,35 @@
 							<br>
 <h2 class="major"><span>Paper Recommendation Policy</span></h2>
 
-<li><b>Automatic Qualification:</b> The first-place winner of each individual track will automatically receive a recommendation for a Main Track paper submission.</li>
+<ul>
+    <li><b>Automatic Qualification:</b> The first-place winner of each individual track will automatically receive a recommendation for a Main Track paper submission.</li>
 
-<li><b>Third Recommendation Slot:</b> The third recommendation slot is awarded to the team with the highest <b>Composite Score</b>, which measures the relative performance gap between a team and the winners of both tracks (excluding the track winners themselves).
-    <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.02); border-left: 4px solid #ed786a; font-family: 'Courier New', Courier, monospace;">
-        <strong>Score Calculation:</strong><br>
-        $score = 0.5 \times \frac{mse_1}{mse_i - mse_1} + 0.5 \times \frac{acc_1}{acc_1 - acc_i}$
-        <br><br>
-        <small>*All scores are rounded to four decimal places.</small>
-    </div>
-</li>
+    <li><b>Third Recommendation Slot:</b> The third recommendation slot is awarded to the team with the highest <b>Composite Score</b>, which measures the relative performance gap between a team and the winners of both tracks (excluding the track winners themselves).
+        
+        <div style="margin: 20px 0; padding: 25px; background: rgba(0,0,0,0.02); border-left: 4px solid #ed786a;">
+            <strong style="color: #444;">Score Calculation Formula:</strong><br><br>
+            <div style="text-align: center; font-size: 1.2em; margin: 10px 0;">
+                $score = 0.5 \times \frac{mse_1}{mse_i - mse_1} + 0.5 \times \frac{acc_1}{acc_1 - acc_i}$
+            </div>
+            <br>
+            <p style="font-size: 0.9em; line-height: 1.6em; border-top: 1px solid #ddd; padding-top: 15px;">
+                <strong>Example Calculation:</strong><br>
+                Assume $mse_1 = 0.1700$ and $acc_1 = 0.9700$.<br>
+                For Team M ($mse_M = 0.1900, acc_M = 0.9500$):<br>
+                $Score_M = 0.5 \times \frac{0.1700}{0.1900 - 0.1700} + 0.5 \times \frac{0.9700}{0.9700 - 0.9500} = \mathbf{28.5000}$
+            </p>
+            <small>*All values for Score, MSE, and Accuracy are rounded to four decimal places.</small>
+        </div>
+    </li>
 
-<li><b>Tie-breaking Rules:</b> In the event of a tie in the composite score, the following criteria will be applied sequentially:
-    <ol style="margin-left: 2em; margin-top: 10px;">
-        <li><b>Average Rank:</b> The lower the average rank across both tracks, the higher the standing.</li>
-        <li><b>Submission Count:</b> The team with fewer test set submissions will be ranked higher.</li>
-        <li><b>Submission Timestamp:</b> The team that achieved their best result earlier (upload time) will be ranked higher.</li>
-    </ol>
-</li>
+    <li><b>Tie-breaking Rules:</b> In the event of a tie in the composite score, the following criteria will be applied sequentially:
+        <ol style="margin-left: 2em; margin-top: 10px;">
+            <li><b>Average Rank:</b> The lower the average rank across both tracks, the higher the standing.</li>
+            <li><b>Submission Count:</b> The team with fewer test set submissions will be ranked higher.</li>
+            <li><b>Submission Timestamp:</b> The team that achieved their best result earlier (upload time) will be ranked higher.</li>
+        </ol>
+    </li>
+</ul>
 
                         </section>
 
